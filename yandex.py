@@ -1,7 +1,7 @@
 import requests
 import json
 from mac import Mac
-
+import env
 
 class Yandex:
     token = ''
@@ -64,6 +64,6 @@ class Yandex:
 
 
 if __name__ == "__main__":
-    y = Yandex(token)
+    y = Yandex(env.yandex_token)
     r = y.create_segment("offspring", "new_uniq_macs.txt")
     print(r)
